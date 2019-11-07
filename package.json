@@ -2,7 +2,7 @@
   "name": "cavaco",
   "version": "1.0.0",
   "description": "For queue",
-  "main": "index.js",
+  "main": "bot.js",
   "author": "Aquele a quem chamam de games",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
