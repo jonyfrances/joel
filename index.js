@@ -26,7 +26,7 @@ bot.on("ready", () => {
   console.log(`Bot has started, with ${bot.users.size} users, in ${bot.channels.size}`); 
   // Example of changing the bot's playing game to something useful. `bot.user` is what the
   // docs refer to as the "botUser".
-  bot.user.setActivity(`I am burre`);
+  bot.user.setActivity(`++help burre`);
 });
 
 
@@ -78,7 +78,6 @@ bot.on("message", async message => {
     if(deus_queue.length<=0){
       deus_queue.push(lol);
       message.channel.send("``` user: " + message.member.user.tag + " added```");
-      message.channel.send("``` " + deus_queue.length + " ```");
     }
     else{
       for(let i = 0; i<deus_queue.length;i++){
@@ -89,7 +88,6 @@ bot.on("message", async message => {
       if(flag <= 0){
         deus_queue.push(lol);
         message.channel.send("``` user: " + message.member.user.tag + " added```");
-        message.channel.send("``` " + deus_queue.length + " ```");
       }
       else{
         message.channel.send("``` ja tas na queue malandro ```");
@@ -111,6 +109,10 @@ bot.on("message", async message => {
       team[i] = i;
       message.channel.send("``` Team: " + team[i] + "\n\t" + tudo[i]+ "```");
     }
+  }
+
+  if(command === "help"){
+    message.author.send("``` ++queue para dar join \n ++check para ver a queue\n ++leave para bazar :) ```")
   }
 
   if(command === "print"){
